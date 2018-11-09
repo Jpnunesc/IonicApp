@@ -1,0 +1,176 @@
+
+<form class="form-horizontal">
+  <h2 style="color: white;">Cadastro de carros:</h2>
+  <p></p>
+  <div class="form-group">
+    <button type="button" class="btn btn-danger" (click)="salvar()" style="margin-left: 85%; width: 150px;">Salvar</button>
+  </div>
+  <p></p>
+  <div class="alert alert-success" *ngIf="sucesso">
+      <strong>Sucesso!</strong><a href="#" class="alert-link">  Dados salvos.</a>.
+    </div>
+    <p></p>
+  <div class="form-check">
+    <label class="form-check-label" style="color: white;">
+      <input type="checkbox" class="form-check-input" name="2" value="option1" [(ngModel)]="carro.carroAntigo">Carro Antigo
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" style="color: white;">
+      <input type="checkbox" class="form-check-input" name="1" value="option2" [(ngModel)]="carro.carroSeminovo" >Carro Seminovo
+    </label>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <label for="ano" class="col-sm-2 control-label" style="color: white;">Imagens</label>
+      <div class="col-sm-10">
+        <input type="file" multiple class="form-control" placeholder="Imagens" name="imagens" (change)="arquivosSelecionados($event)">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ano" class="col-sm-2 control-label"style="color: white;">Imagens Principal</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" placeholder="Imagens" name="imagens" (change)="arquivoPrincipal($event)">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="marca" [(ngModel)]="carro.marca" placeholder="MARCA" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="modelo" [(ngModel)]="carro.modelo" placeholder="MODELO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="ano" [(ngModel)]="carro.ano" placeholder="ANO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="cor" [(ngModel)]="carro.cor" placeholder="COR" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="pais" [(ngModel)]="carro.paisOrigem" placeholder="PAIS DE ORIGEM" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="potencia" [(ngModel)]="carro.potencia" placeholder="POTÊNCIA" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="quilometragem" [(ngModel)]="carro.quilometragem" placeholder="QUILOMETRAGEM"
+          aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="ar" [(ngModel)]="carro.arCondicionado" placeholder="AR CONDICIONADO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="vidros" [(ngModel)]="carro.vidros" placeholder="VIDROS" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="freios" [(ngModel)]="carro.freios" placeholder="FREIOS" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="rodas" [(ngModel)]="carro.rodas" placeholder="RODAS" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="tracao" [(ngModel)]="carro.tracao" placeholder="TRACÃO" aria-describedby="sizing-addon1">
+
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="quilometragem" [(ngModel)]="carro.statusCarro" placeholder="STATUS_CARRO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="preco" [(ngModel)]="carro.preco" placeholder="PREÇO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="descricao" [(ngModel)]="carro.descricao" placeholder="DESCRIÇÃO" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">
+        </span>
+        <input type="text" class="form-control" name="bancos" [(ngModel)]="carro.bancos" placeholder="BANCOS" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+  </div>
+</form>
