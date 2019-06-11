@@ -1,0 +1,39 @@
+
+ .mainMenu ion-list .item{
+    background: grey;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2.75rem;
+    color: white;
+}
+
+ ion-list .titulo{
+    background: grey;
+    color: white;
+    height: 10rem;
+    display: flex;
+   flex-direction: row;
+    padding-left: 1.75rem;
+    font-size: 4.0rem;
+    align-items: center;
+}
+.item p{
+color: white;
+}
+.mainMenu{
+    background: grey;
+}
+
+.titulo ion-icon{
+    margin-left: auto ;
+    width: 1em;
+    color: white;
+}
+ .titulo h2{  
+    margin-right: auto; 
+ }
+ .end{
+    margin-left: auto ;  
+ }

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <h3 style="color:white;"> UP7 entre amigos</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngFor="let feed of formRifa" tappable margin-bottom>
+    <ion-card>
+      <img style="width:100%; height: 200px;" src="{{feed.imagem}}"/>
+      <p></p>
+          <p style="
+          font-weight: bolder;
+          font-size: 20px;
+          margin-left: 5%;">
+          {{feed.descricao}}
+        </p>
+        <!-- <p style="
+        font-size: 25px; 
+        margin-left: auto">
+       100/{{feed.numero}}
+      </p> -->
+      <ion-button style="font-size: 18px; margin-left: auto; display: grid;" (click)="partipicarRifa(feed.id)"color="dark">Participar</ion-button>
+    </ion-card>
+  </div>
+</ion-content>
+<!-- <ion-tabs color="dark">
+    <ion-tab label="Antigos" icon="md-car" href="/carrosAntigos">
+      <ion-router-outlet name="antigos"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab label="Eventos" icon="md-calendar" href="/eventos">
+      <ion-router-outlet name="eventos"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab label="Seminovos" icon="md-car" href="/tabs/(three:three)">
+      <ion-router-outlet name="seminovos"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab label="Entre Amigos" icon="md-document" href="/tabs/(three:three)">
+      <ion-router-outlet name="entreamigos"></ion-router-outlet>
+    </ion-tab>
+  </ion-tabs> -->

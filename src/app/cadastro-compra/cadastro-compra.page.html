@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon name="return-left" style="font-size: 2.0em;" color="medium" slot="start" (click)="voltar()"></ion-icon>
+    <ion-title>
+      <h3 style="color:white;">Realizar compra</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title style="margin-top: 15%; text-align: center;">Informações de cadastro</ion-title>
+  <p></p>
+  <ion-list style="margin-top: 15%;">
+    <div>
+      <ion-item>
+        <ion-label color="dark">Nome:</ion-label>
+        <ion-input placeholder="Digite teu nome" maxlength="100" name="nome" [(ngModel)]="formUsuario.nome"></ion-input>
+      </ion-item>
+      <p style="color: red;text-align: center; font-size: 12px;">{{msgNome}}</p>
+      <ion-item>
+        <ion-label color="dark" fixed>Telefone:</ion-label>
+        <ion-input type="number" placeholder="(99) 99999-9999" name="tel" [(ngModel)]="formUsuario.telefone"></ion-input>
+      </ion-item>
+      <p style="color: red;text-align: center; font-size: 12px;">{{msgNumero}}</p>
+      <ion-item>
+        <ion-label>Estado</ion-label>
+        <ion-select [(ngModel)]="formUsuario.estado">
+          <ion-select-option value="Acre">Acre</ion-select-option>
+          <ion-select-option value="Alagoas">Alagoas</ion-select-option>
+          <ion-select-option value="Amapá">Amapá</ion-select-option>
+          <ion-select-option value="Amazonas">Amazonas</ion-select-option>
+          <ion-select-option value="Bahia">Bahia</ion-select-option>
+          <ion-select-option value="Ceará">Ceará</ion-select-option>
+          <ion-select-option value="Distrito Federal">Distrito Federal</ion-select-option>
+          <ion-select-option value="Espírito Santo">Espírito Santo</ion-select-option>
+          <ion-select-option value="Goiás">Goiás</ion-select-option>
+          <ion-select-option value="Maranhão">Maranhão</ion-select-option>
+          <ion-select-option value="Mato Grosso">Mato Grosso</ion-select-option>
+          <ion-select-option value="Mato Grosso do Sul">Mato Grosso do Sul</ion-select-option>
+          <ion-select-option value="Minas Gerais">Minas Gerais</ion-select-option>
+          <ion-select-option value="Pará">Pará</ion-select-option>
+          <ion-select-option value="Paraíba">Paraíba</ion-select-option>
+          <ion-select-option value="Paraná">Paraná</ion-select-option>
+          <ion-select-option value="Pernambuco">Pernambuco</ion-select-option>
+          <ion-select-option value="Piauí">Piauí</ion-select-option>
+          <ion-select-option value="Rio de Janeiro">Rio de Janeiro</ion-select-option>
+          <ion-select-option value="Rio Grande do Sul">Rio Grande do Sul</ion-select-option>
+          <ion-select-option value="Rio Grande do Norte">Rio Grande do Norte</ion-select-option>
+          <ion-select-option value="Rondônia">Rondônia</ion-select-option>
+          <ion-select-option value="Roraima">Roraima</ion-select-option>
+          <ion-select-option value="Santa Catarina">Santa Catarina</ion-select-option>
+          <ion-select-option value="São Paulo">São Paulo</ion-select-option>
+          <ion-select-option value="Sergipe">Sergipe</ion-select-option>
+          <ion-select-option value="Tocantins">Tocantins</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <p style="color: red;text-align: center; font-size: 12px;">{{msgEstado}}</p>
+    </div>
+  </ion-list>
+  <ion-button round style="display: grid; margin-top: 15%;" (click)="confirmar()" name="nome">Confirmar</ion-button>
+  <p style="text-align: center; color: green">{{msg}}</p>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+  </ion-toolbar>
+</ion-footer>

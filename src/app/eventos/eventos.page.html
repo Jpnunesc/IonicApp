@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <!-- <ion-buttons slot="start">
+      <button ion-button (click)="eventos()">
+        <ion-icon name="arrow-back" style="font-size: 2.0em;"></ion-icon>
+      </button>
+    </ion-buttons> -->
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      <h3 style="color:white;">Eventos</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="gray">
+  <ion-button ion-button color="dark" outline (click)="eventos($event)">Janeiro</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Fevereiro</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Março</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Abril</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Maio</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Junho</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Julho</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Agosto</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Setembro</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Outubro</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Novembro</ion-button>
+  <ion-button ion-button color="dark" outline (click)=eventos($event)>Dezembro</ion-button>
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="dark">
+    </ion-toolbar>
+  </ion-footer>
+<!-- <ion-footer>
+  <ion-toolbar color="dark">
+    <div class="footer">
+      <div>
+        <ion-icon ios="ios-car" md="md-car" (click)="antigos()"></ion-icon>
+        <p>Antigos</p>
+      </div>
+      <div>
+        <ion-icon ios="ios-calendar" md="md-calendar" style="background:silver" (click)="eventos()"></ion-icon>
+        <p>Eventos</p>
+      </div>
+      <div>
+        <ion-icon ios="ios-car" md="md-car" (click)="seminovos()"></ion-icon>
+        <p>SemiNovos</p>
+      </div>
+      <div>
+        <ion-icon ios="ios-document" md="md-document" (click)="eventos()"></ion-icon>
+        <p>Rifas</p>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer> -->

@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon name="return-left" style="font-size: 2.0em;" color="medium" (click)="voltar()" slot="start"></ion-icon>
+    <ion-title>
+      <h3 style="color:white;">Entre Amigos</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="common-bg">
+  <div class="border-bottom" padding>
+    <div class="border-bottom" padding>
+      <img style="width:100%; height: 200px;" src="{{imagem}}" />
+      <ion-grid class="filters" no-padding margin-top>
+        <ion-row>
+          <ion-col class="adult" width-70>
+            <span ion-text color="primary"><strong>Descrição:</strong> {{formRifa.descricao}}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="adult" width-70>
+            <span ion-text color="primary"><strong>Valor:</strong> {{formRifa.preco}}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="adult" width-70>
+            <span ion-text color="primary"><strong>Numero:</strong> {{formRifa.numero}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div>
+    <strong>REGULAMENTOS:</strong>
+    <p></p>
+    <ion-card>
+      <strong style="text-align: center; display: block;" (click)="mostrarCotas()">COTAS E VALOR:</strong>
+      <p></p>
+      <ul *ngIf="cotasB">
+        <li>
+          O Sorteio é composto de 1.000 cotas (000 a 999), cada cota no valor de R$20,00.
+        </li>
+        <li>
+          O Participante poderá adquirir uma ou mais cotas, aumentando as suas chances de ganhar.
+        </li>
+      </ul>
+    </ion-card>
+    <p></p>
+    <ion-card>
+      <strong style="text-align: center; display: block;" (click)="mostarPagamentos()">PAGAMENTOS E COMPROVANTE:</strong>
+      <p></p>
+      <ul *ngIf="pagamentosB">
+        <li>
+          O Pagamento deverá ser feito por depósito ou transferência bancária para a conta do Organizador: CEF Caixa Econômica Federal:104
+          Agência: 0002 Op:003 C/c:4906-4 Renan Jaccoud Escalante CNPJ:27.198.025/0001-06. (Evitar fazer depósito em caixas
+          eletrônicos em “Envelope”)
+        </li>
+        <li>
+          Assim que for realizado o depósito ou transferência, encaminhar foto do comprovante no WhatsApp:(61) 98580-4280 ; (Ao adquirir
+          sua cota, o Participante concorda desde já e sem ônus, com a utilização de seu nome e sua imagem caso seja o ganhador).
+        </li>
+      </ul>
+    </ion-card>
+    <p></p>
+    <ion-card>
+      <strong style="text-align: center; display: block;" (click)="mostrarSorteio()">SORTEIO:</strong>
+      <p></p>
+      <ul *ngIf="sorteioB">
+        <li>
+          O sorteio será pelos 3 últimos dígitos do 1º Prêmio da Loteria Federal, pela extração do sábado seguinte à venda e pagamento
+          de todos as cotas. No exemplo: 1º Prêmio: 76435, a cota contemplada seria a nº 435.
+        </li>
+        <li>
+          Todas as informações sobre o sorteio, data de sorteio e lista de números disponíveis, deverão ser consultados pelo WhatsApp
+          (61) 98580-4280 ou neste site: www.up7antigos.com.br.
+        </li>
+        <li>
+          O resultado da Loteria Federal pode ser consultado no site da CEF ou solicitado em qualquer Casa Lotérica.
+        </li>
+        <li>
+          Um dia após o sorteio o ganhador receberá um telefonema informando que ganhou o carro.
+        </li>
+      </ul>
+    </ion-card>
+    <p></p>
+    <ion-card>
+      <strong style="text-align: center; display: block;" (click)="mostrarEntrega()">ENTREGA DO PRÊMIO:</strong>
+      <p></p>
+      <ul *ngIf="entregaB">
+        <li>
+          Na entrega do prêmio será tirada uma foto, para divulgação do ganhador.
+        </li>
+        <li>
+          Se a Entrega do Prêmio for para fora de Brasília/DF, será feita pela TransPax, por conta do Organizador.
+        </li>
+        <li>
+          O Fusca será entregue livre de qualquer dívida, com doc 2018 pago, ficando a cargo do Ganhador os custos de transferência
+          de propriedade.
+        </li>
+        <li>
+          O carro será entregue em condições de uso (revisado). Devido à idade do veículo, não será dada garantia em caso de qualquer
+          tipo de manutenção futura.
+        </li>
+      </ul>
+    </ion-card>
+    <p></p>
+    <ion-card>
+      <strong style="text-align: center; display: block;" (click)="mostrarDisposicoes()">DISPOSIÇÕES GERAIS:</strong>
+      <p></p>
+      <ul *ngIf="disposicoesB">
+        <li>
+          10% do valor arrecado será doado ao Projeto Pisco de Luz do Jeep Clube Sobradinho.
+        </li>
+        <li>
+          10% será doado a Lucas Santos da Pastoral do Teatro.
+        </li>
+        <li>
+          10% será doado à Paróquia São José.
+        </li>
+        <li>
+          Neste Sorteio, fica vedada a participação do Organizador e de seus familiares.
+        </li>
+        <li>
+          Compre suas cotas e Boa Sorte !
+        </li>
+      </ul>
+    </ion-card>
+    <ion-item>
+      <ion-label style="text-align: center; display: block;">Eu aceito os termos</ion-label>
+      <ion-checkbox [(ngModel)]="aceito"></ion-checkbox>
+    </ion-item>
+    <p></p>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-button color="danger" [disabled]="!aceito" (click)="CadastroUsuario()" style="display: grid;">Comprar</ion-button>
+  </ion-toolbar>
+</ion-footer>
